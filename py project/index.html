@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Game 💖</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Game Container -->
+        <div class="game-box">
+            <!-- Stage 1: Number Guessing -->
+            <div id="stage1" class="stage active">
+                <h1 class="title">🎮 Number Guessing Game</h1>
+                <p class="subtitle">Guess the number between 1 and 100</p>
+                <div class="heart-animation"></div>
+                
+                <div class="input-group">
+                    <input 
+                        type="number" 
+                        id="guessInput" 
+                        placeholder="Enter your guess 🤔" 
+                        min="1" 
+                        max="100"
+                        autocomplete="off"
+                    >
+                    <button onclick="submitGuess()" class="btn btn-primary">Submit</button>
+                </div>
+                
+                <div id="feedback" class="feedback"></div>
+                <div id="guessCount" class="guess-count">Guesses: 0</div>
+                <div id="specialMessage" class="special-message"></div>
+            </div>
+
+            <!-- Stage 2: Secret Key -->
+            <div id="stage2" class="stage">
+                <h1 class="title">🔐 Secret Key Challenge</h1>
+                <p class="subtitle">Guess the secret key to enter my heart ❤️</p>
+                <div class="floating-hearts"></div>
+                
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="keyInput" 
+                        placeholder="ENTER THE KEY" 
+                        autocomplete="off"
+                    >
+                    <button onclick="submitKey()" class="btn btn-primary">Submit</button>
+                </div>
+                
+                <div id="keyFeedback" class="feedback"></div>
+            </div>
+
+            <!-- Stage 3: Anniversary Date -->
+            <div id="stage3" class="stage">
+                <h1 class="title">📅 Anniversary Challenge</h1>
+                <p class="subtitle">When is our anniversary? (mention the date)</p>
+                <div class="sparkle-animation"></div>
+                
+                <div class="input-group">
+                    <input 
+                        type="number" 
+                        id="dateInput" 
+                        placeholder="Enter the date (16)" 
+                        min="1" 
+                        max="31"
+                        autocomplete="off"
+                    >
+                    <button onclick="submitDate()" class="btn btn-primary">Submit</button>
+                </div>
+                
+                <div id="dateFeedback" class="feedback"></div>
+            </div>
+
+            <!-- Stage 4: Duration Together -->
+            <div id="stage4" class="stage">
+                <h1 class="title">💑 Time Together</h1>
+                <p class="subtitle">How long have we been together? (year.date format)</p>
+                <div class="pulse-animation"></div>
+                
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="durationInput" 
+                        placeholder="Enter duration (2.9)" 
+                        autocomplete="off"
+                    >
+                    <button onclick="submitDuration()" class="btn btn-primary">Submit</button>
+                </div>
+                
+                <div id="durationFeedback" class="feedback"></div>
+            </div>
+
+            <!-- Stage 5: Love Word -->
+            <div id="stage5" class="stage">
+                <h1 class="title">💕 The Magic Word</h1>
+                <p class="subtitle">Enter the word to complete the wish</p>
+                
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="wordInput" 
+                        placeholder="Enter the word [love]" 
+                        autocomplete="off"
+                    >
+                    <button onclick="submitWord()" class="btn btn-primary">Submit</button>
+                </div>
+                
+                <div id="wordFeedback" class="feedback"></div>
+            </div>
+
+            <!-- Final Stage: Heart Animation -->
+            <div id="finalStage" class="stage">
+                <div class="big-heart-container">
+                    <div class="big-heart"></div>
+                </div>
+                <h1 class="title final-text">You are my baby Ummmaa 💕</h1>
+                <p class="subtitle" style="margin-top: 30px;">I LOVE YOU KUNJOOSEE💖💖</p>
+                <button onclick="location.reload()" class="btn btn-primary">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
